@@ -16,4 +16,7 @@ def hello():
 def about():
     return {'message': 'A fully functional API to manage patient records.'}
 
-print(load_data()['P001']['name'])
+@app.get("/view")
+def view():
+    data= load_data()
+    return data
